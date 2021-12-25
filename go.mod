@@ -2,7 +2,7 @@ module github.com/SudTechnology/mgp-demo-go
 
 go 1.16
 
-replace github.com/SudTechnology/sud-mgp-auth-go => /Users/xiaoenai/working/go/src/github.com/SudTechnology/sud-mgp-auth-go
+replace github.com/SudTechnology/sud-mgp-auth-go => /Users/xxx/working/go/src/github.com/SudTechnology/sud-mgp-auth-go
 
 require (
 	github.com/SudTechnology/sud-mgp-auth-go v0.0.0-00010101000000-000000000000
