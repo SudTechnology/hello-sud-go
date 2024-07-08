@@ -92,6 +92,7 @@ func GetSsToken(c *gin.Context) {
 	data := &GetSSTokenResp{
 		Token:      ssTokenResp.Token,
 		ExpireDate: ssTokenResp.ExpireDate,
+		UserInfo:   buildUserInfo(),
 	}
 	resp := NewBaseRespSuccess()
 	resp.Data = data
@@ -126,6 +127,23 @@ func UpdateSSToken(c *gin.Context) {
 	c.JSON(200, resp)
 }
 
+func buildUserInfo() *GetUserInfoResp {
+	index := rand.Intn(100)
+	uid := fmt.Sprintf("uid%d", index)
+	nickName := fmt.Sprintf("name%d", index)
+	gender := "male"
+	avatar := "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fi2.hdslb.com%2Fbfs%2Fface%2F3d4f30235a8f3bb9914fe59ff58e1009e5498ba6.jpg%4068w_68h.jpg&refer=http%3A%2F%2Fi2.hdslb.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1637226890&t=63d2ca921e1fde4abe30329f67e3612d"
+
+	userInfo := &GetUserInfoResp{
+		Uid:      uid,
+		NickName: nickName,
+		Gender:   gender,
+		Avatar:   avatar,
+	}
+
+	return userInfo
+}
+
 /**
  * 获取用户信息
  * 调用方：游戏服务
@@ -144,18 +162,7 @@ func GetUserInfo(c *gin.Context) {
 	}
 	log.Printf("uidResp:%+v \n", uidResp)
 
-	index := rand.Intn(100)
-	uid := fmt.Sprintf("uid%d", index)
-	nickName := fmt.Sprintf("name%d", index)
-	gender := "male"
-	avatar := "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fi2.hdslb.com%2Fbfs%2Fface%2F3d4f30235a8f3bb9914fe59ff58e1009e5498ba6.jpg%4068w_68h.jpg&refer=http%3A%2F%2Fi2.hdslb.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1637226890&t=63d2ca921e1fde4abe30329f67e3612d"
-
-	data := &GetUserInfoResp{
-		Uid:      uid,
-		NickName: nickName,
-		Gender:   gender,
-		Avatar:   avatar,
-	}
+	data := buildUserInfo()
 	resp := NewBaseRespSuccess()
 	resp.Data = data
 	c.JSON(200, resp)

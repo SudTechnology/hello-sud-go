@@ -26,8 +26,9 @@ type GetSSTokenReq struct {
 
 // GetSSTokenResp 结构体
 type GetSSTokenResp struct {
-	Token      string `json:"ss_token"`
-	ExpireDate int64  `json:"expire_date"`
+	Token      string      `json:"ss_token"`
+	ExpireDate int64       `json:"expire_date"`
+	UserInfo   interface{} `json:"user_info"`
 }
 
 // UpdateSSTokenReq 请求结构体

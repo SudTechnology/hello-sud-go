@@ -1,11 +1,13 @@
-module github.com/SudTechnology/mgp-demo-go
+// module github.com/SudTechnology/mgp-demo-go
+module github.com/SudTechnology/hello-sud-go
 
 go 1.16
 
-replace github.com/SudTechnology/sud-mgp-auth-go => /Users/xxx/working/go/src/github.com/SudTechnology/sud-mgp-auth-go
+// replace github.com/SudTechnology/sud-mgp-auth-go => github.com/SudTechnology/sud-mgp-auth-go
 
 require (
-	github.com/SudTechnology/sud-mgp-auth-go v0.0.0-00010101000000-000000000000
+	github.com/SudTechnology/sud-mgp-auth-go v1.0.7
+	// github.com/SudTechnology/sud-mgp-auth-go v0.0.0-00010101000000-000000000000
 	github.com/gin-gonic/gin v1.7.4
 	github.com/golang/protobuf v1.4.2 // indirect
 	github.com/google/go-cmp v0.5.0 // indirect

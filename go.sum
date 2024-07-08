@@ -1,3 +1,5 @@
+github.com/SudTechnology/sud-mgp-auth-go v1.0.7 h1:RnPoFwgooAlleRkr1u4skz814hsfNNEgt4QmwI4RQuk=
+github.com/SudTechnology/sud-mgp-auth-go v1.0.7/go.mod h1:8YQGJP2vRUBo/5UHNCXvnMjMNOVE6sAdycAzKzVxXWU=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
